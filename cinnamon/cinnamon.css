@@ -145,7 +145,7 @@ StScrollBar StButton#vhandle:hover
      -arrow-border-width: 1px;
      -arrow-border-color: rgba(170,170,170,0.5);
      -arrow-base: 18px;
-     -arrow-rise: 10px;
+     -arrow-rise: 0px;
      -st-shadow: 0px -1px 2px 0px rgba(255,255,255,0.9);
      -boxpointer-gap: 2px;
 }
@@ -1640,7 +1640,7 @@ StScrollBar StButton#vhandle:hover
 
 .menu-favorites-box {  
        margin: auto;
-       background-color: rgba(238,238,238,0.7);
+/*       background-color: rgba(238,238,238,0.7); */
        border: solid 0;
        border-color: rgba(0,0,0,0.4);
        border-radius: 12px;
