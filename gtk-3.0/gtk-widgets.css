@@ -2361,6 +2361,7 @@ GtkColorButton.button {
     border-left-color: shade(@theme_bg_color, 0.85);
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
+    box-shadow: none;
     color: @titlebar_fg_color;
 }
 
@@ -2523,6 +2524,7 @@ GtkStatusbar .button:checked:backdrop,
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @toolbar_fg_color;
+    box-shadow: none;
 }
 
 .primary-toolbar .raised .button,
@@ -2537,6 +2539,7 @@ GtkStatusbar .button:checked:backdrop,
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @toolbar_fg_color;
+    box-shadow: none;
 }
 
 .primary-toolbar .raised .button:backdrop,
