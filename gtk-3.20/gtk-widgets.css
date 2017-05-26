@@ -1302,10 +1302,11 @@ notebook tab {
 }
 
 notebook tab:hover {
-    color: @theme_selected_bg_color;                                      );
+    color: @theme_selected_bg_color;
 }
 
-notebook tab:checked {
+notebook tab:checked label {
+    color: @theme_selected_bg_color;
 }
 
 notebook tab:backdrop {
