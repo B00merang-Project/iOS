@@ -67,6 +67,7 @@
 
 *:selected:backdrop,
 *:selected:focus:backdrop {
+    border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 0.8);
     color: @theme_fg_color;
 }
@@ -244,7 +245,6 @@ button:link > label, button:visited > label {
 /**********
  * button *
  **********/
-/* Marker : button*/
 button {
     padding: 3px 8px;
     border-width: 1px;
@@ -638,19 +638,30 @@ entry entry {
 /************
  * expander *
  ************/
+expander arrow {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+expander arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+expander arrow:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 expander {
     color: alpha(currentColor, 0.7);
-    border: alpha(currentColor, 0.7);
 }
 
 expander:hover {
     color: alpha(currentColor, 0.8);
-    border-color: alpha(currentColor, 0.8);
 }
 
-expander:active {
+expander:checked {
     color: alpha(currentColor, 0.9);
-    border-color: alpha(currentColor, 0.9);
 }
 
 /**************
@@ -1026,18 +1037,17 @@ grip {
     background-color: transparent;
 }
 
-.arrow {
-    color: alpha(currentColor, 0.7);
-}
-
-/* GTK 3.20  arrow */
 arrow,
 combobox arrow {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-  min-height: 16px;
-  min-width: 16px; }
+    color: alpha(currentColor, 0.7);
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    min-height: 16px;
+    min-width: 16px;
+}
+
 combobox:drop(active) {
-  box-shadow: none; }
+    box-shadow: none;
+}
 
 /********
  * menu *
@@ -1174,6 +1184,25 @@ menu menuitem *:hover {
 menu menuitem:disabled,
 menu menuitem *:disabled {
     color: mix(@menu_fg_color, @menu_bg_color, 0.5);
+}
+
+/* menu arrow */
+menu menuitem arrow,
+.menu menuitem arrow {
+    min-height: 16px;
+    min-width: 16px;
+}
+
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    margin-left: 10px;
+}
+
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+    margin-right: 10px;
 }
 
 menuitem check,
@@ -1519,11 +1548,11 @@ progress row:selected:focus {
     background-image: image(@theme_selected_bg_color);
 }
 
- trough,
- trough row,
- trough row:hover,
- trough row:selected,
- trough row:selected:focus {
+trough,
+trough row,
+trough row:hover,
+trough row:selected,
+trough row:selected:focus {
     min-width: 2px;
     min-height: 2px;
     border-width: 0;
@@ -1729,13 +1758,13 @@ scrollbar trough {
     border: 2px solid transparent;
     border-radius: 12px;
     background-clip: padding-box;
-    background-color: shade(@theme_bg_color, 0.8); }
+    background-color: shade(@theme_bg_color, 0.6); }
     scrollbar slider:hover {
-      background-color: shade(@theme_bg_color, 0.7); }
-    scrollbar slider:hover:active {
       background-color: shade(@theme_bg_color, 0.6); }
+    scrollbar slider:hover:active {
+      background-color: shade(@theme_bg_color, 0.55); }
     scrollbar slider:backdrop {
-      background-color: shade(@theme_bg_color, 0.75); }
+      background-color: shade(@theme_bg_color, 0.55); }
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.fine-tune slider {
@@ -1754,7 +1783,7 @@ scrollbar trough {
       margin: 0;
       min-width: 8px;
       min-height: 8px;
-      background-color: shade(@theme_bg_color, 0.8);
+      background-color: shade(@theme_bg_color, 0.6);
       border: 2px solid transparent; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
       min-width: 12px;
@@ -2440,9 +2469,17 @@ headerbar button {
 }
 
 headerbar button:hover {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 headerbar button:active {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 /* workaround for adresstabs in Nautilus*/
@@ -2450,17 +2487,28 @@ statusbar button:checked,
 headerbar button:checked,
 headerbar button:checked:active,
 headerbar button:checked:hover {
+    border: none;
     background-image: none;
+    background-color: transparent;
+    box-shadow: none;
     color: @theme_selected_bg_color;
 }
 
 headerbar button:active:hover {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 headerbar button:focus,
 headerbar button:hover:focus,
 headerbar button:active:focus,
 headerbar button:active:hover:focus {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 /* bug in disabled headerbar buttons */
