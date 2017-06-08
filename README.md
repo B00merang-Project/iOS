@@ -2,7 +2,7 @@
 
 iOS 10 theme for Linux desktops, for the moment only available for Unity and Cinnamon
 
-![ios-10](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-04-23-06-42_orig.png)
+![ios-10](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-04-23-33-54_orig.png)
 
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
@@ -13,7 +13,7 @@ iOS 10 theme for Linux desktops, for the moment only available for Unity and Cin
 
 **More info :** http://b00merang.weebly.com/ios-10.html
 
-###Manual installation###
+### Manual installation ###
 
 Extract the zip file to the themes directory i.e. `/home/USERNAME/.themes`
 
