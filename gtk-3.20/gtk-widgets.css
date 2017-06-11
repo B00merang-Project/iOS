@@ -291,10 +291,7 @@ button:active:hover:focus {
 
 
 button:checked {
-    background-image: linear-gradient(to bottom,
-                                      shade(@selected_bg_color, 1.2),
-                                      shade(@selected_bg_color, 0.95)
-                                      );
+    background-image: image(@theme_selected_bg_color);
     box-shadow: 0 0 1px 1px shade(@theme_selected_bg_color, 1.6);
     color: @theme_selected_fg_color;
     border-color: shade(@theme_selected_bg_color, 1.4);
@@ -318,6 +315,7 @@ button:disabled {
     border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
+    color: @theme_unfocused_fg_color;   
 }
 
 button:active *:disabled {
@@ -684,7 +682,7 @@ list-row:selected {
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.85);
@@ -2335,7 +2333,7 @@ Gtktextview {
 /* Firefox adress bar */
 label.separator {
   color: @theme_fg_color; }
-  label.separator:backdrop {
+label.separator:backdrop {
     color: shade(@theme_fg_color, 0.9); }
 label selection {
   background-color: @theme_selected_bg_color;
@@ -2561,6 +2559,35 @@ headerbar button:active:hover {
     box-shadow: none;
 }
 
+/* make stack switcher look like in ios */
+headerbar .stack-switcher.linked button,
+headerbar .stack-switcher.linked button:first-child,
+headerbar .stack-switcher.linked button:last-child {
+    padding: 6px 30px;
+    border: 1px solid @theme_selected_bg_color;
+}
+
+headerbar .stack-switcher.linked button {
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+headerbar .stack-switcher button:checked {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+headerbar .stack-switcher.linked button:backdrop,
+headerbar .stack-switcher.linked button:first-child:backdrop,
+headerbar .stack-switcher.linked button:last-child:backdrop {
+    border-color: shade(@theme_unfocused_bg_color, 0.8);
+}
+
+headerbar .stack-switcher button:checked:backdrop {
+    background-color: shade(@theme_unfocused_bg_color, 0.8);
+    color: @theme_unfocused_fg_color;
+}
+
 headerbar button:focus,
 headerbar button:hover:focus,
 headerbar button:active:focus,
@@ -2573,7 +2600,10 @@ headerbar button:active:hover:focus {
 
 /* bug in disabled headerbar buttons */
 headerbar button:disabled {
-    color: @theme_unfocused_fg_color;
+    background-color: transparent;
+    border-color: transparent;
+    text-shadow: 0 0 1px @theme_fg_color;
+    -gtk-icon-shadow: 0 0 1px @theme_fg_color;
 }
 
 headerbar button:active *:disabled {
@@ -2587,8 +2617,7 @@ headerbar button:backdrop {
 
 statusbar button:checked:backdrop,
 headerbar button:checked:backdrop,
-headerbar button:checked:active:backdrop,
-headerbar button:checked:hover:backdrop {
+headerbar button:checked:active:backdrop {
     border-color: transparent;
     background-color: transparent;
     box-shadow: none;
@@ -3903,7 +3932,6 @@ GtkBubbleWindow toolbar {
  * CSD *
  *******/
 decoration {
-  color: red;
   border-radius: 4px 4px 0 0;
   border-width: 0px;
   box-shadow: 0 3px 9px 1px rgba(0,0,0,0.3), 0 0 0 1px rgba(0, 0, 0, 0.23);
