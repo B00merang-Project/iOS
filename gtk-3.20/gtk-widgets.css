@@ -690,6 +690,12 @@ frame > border {
     box-shadow: none;
 }
 
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
@@ -1322,8 +1328,16 @@ modelbutton:active:hover {
     color: @theme_selected_fg_color;
 }
 
-/* Nautilus rename popup */
-.csd popover.background, popover.background {
+modelbutton.flat arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+modelbutton.flat arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+popover.background,
+.csd popover.background {
     box-shadow: 0 0 2px 0px gray;
     border: 1px solid @borders; }
 popover.background:backdrop {
@@ -2519,7 +2533,7 @@ headerbar .subtitle {
 headerbar combobox,
 headerbar button { 
     padding: 4px 20px;
-    border: none;
+    border: 1px solid transparent;
     background-image: none;
     background-color: transparent;
     color: @titlebar_fg_color;
@@ -2527,14 +2541,12 @@ headerbar button {
 }
 
 headerbar button:hover {
-    border: none;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
 }
 
 headerbar button:active {
-    border: none;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
@@ -2545,7 +2557,6 @@ statusbar button:checked,
 headerbar button:checked,
 headerbar button:checked:active,
 headerbar button:checked:hover {
-    border: none;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
@@ -2553,46 +2564,15 @@ headerbar button:checked:hover {
 }
 
 headerbar button:active:hover {
-    border: none;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
-}
-
-/* make stack switcher look like in ios */
-headerbar .stack-switcher.linked button,
-headerbar .stack-switcher.linked button:first-child,
-headerbar .stack-switcher.linked button:last-child {
-    padding: 6px 30px;
-    border: 1px solid @theme_selected_bg_color;
-}
-
-headerbar .stack-switcher.linked button {
-    border-right-width: 0;
-    border-left-width: 0;
-}
-
-headerbar .stack-switcher button:checked {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-headerbar .stack-switcher.linked button:backdrop,
-headerbar .stack-switcher.linked button:first-child:backdrop,
-headerbar .stack-switcher.linked button:last-child:backdrop {
-    border-color: shade(@theme_unfocused_bg_color, 0.8);
-}
-
-headerbar .stack-switcher button:checked:backdrop {
-    background-color: shade(@theme_unfocused_bg_color, 0.8);
-    color: @theme_unfocused_fg_color;
 }
 
 headerbar button:focus,
 headerbar button:hover:focus,
 headerbar button:active:focus,
 headerbar button:active:hover:focus {
-    border: none;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
@@ -3926,6 +3906,46 @@ GtkBubbleWindow.osd.background {
 
 GtkBubbleWindow toolbar {
     background-color: transparent;
+}
+
+/******************
+ * Stack switcher *
+ ******************/
+.stack-switcher.linked button,
+.stack-switcher.linked button:last-child,
+.stack-switcher.linked button:first-child {
+    min-height: 20px;
+    min-width: 80px;
+    border: 1px solid @theme_selected_bg_color;
+}
+
+.stack-switcher.linked button:first-child,
+.stack-switcher.linked button:first-child:hover {
+    border-left-width: 1px;
+}
+
+.stack-switcher.linked button,
+.stack-switcher.linked button:last-child {
+    border-left-width: 0;
+}
+
+.stack-switcher button:checked,
+.stack-switcher button:checked:hover {
+    border-right-width: 1px;
+    border-left-width: 0;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.stack-switcher.linked button:backdrop,
+.stack-switcher.linked button:last-child:backdrop,
+.stack-switcher.linked button:first-child:backdrop {
+    border-color: shade(@theme_unfocused_bg_color, 0.8);
+}
+
+.stack-switcher button:checked:backdrop {
+    background-color: shade(@theme_unfocused_bg_color, 0.8);
+    color: @theme_unfocused_fg_color;
 }
 
 /*******
