@@ -22,7 +22,7 @@
     -GtkPaned-handle-size: 4;
     -GtkProgressBar-min-horizontal-bar-height: 2;
     -GtkProgressBar-min-vertical-bar-width: 2;
-    -GtkRange-slider-width: 12;
+    -GtkRange-slider-width: 5;
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 0;
     -GtkRange-trough-under-steppers: 1;
@@ -1702,22 +1702,22 @@ GtkLevelBar.vertical {
 }
 
 .scrollbar.slider {
-    border-width: 3px;
+    border-width: 2px;
     border-color: transparent;
-    border-radius: 6px;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.21);
+    border-radius: 2px;
+    background-color: shade(@theme_bg_color, 0.6);
 }
 
 .scrollbar.slider:hover,
 .scrollbar.slider.vertical:hover {
     border-color: transparent;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.31);
+    background-color: shade(@theme_bg_color, 0.6);
 }
 
 .scrollbar.slider:active,
 .scrollbar.slider.vertical:active {
     border-color: transparent;
-    background-color: shade(@theme_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 0.55);
 }
 
 .scrollbar.slider.fine-tune:prelight:active {
