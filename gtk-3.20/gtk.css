@@ -31,7 +31,7 @@
 /* shadow effects */
 @define-color light_shadow #fff;
 @define-color dark_shadow #000;
-@define-color borders shade(@theme_bg_color, 0.95);
+@define-color borders shade(@bg_color, 0.95);
 
 /* misc colors used by gtk+ */
 @define-color info_fg_color rgb (58, 135, 173);
