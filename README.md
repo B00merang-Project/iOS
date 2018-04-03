@@ -1,8 +1,8 @@
-# iOS 10
+# iOS 11
 
-iOS 10 theme for Linux desktops, for the moment only available for Unity and Cinnamon
+iOS 11 theme for Linux desktops, for the moment only available for Unity and Cinnamon
 
-![ios-10](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-04-23-33-54_orig.png)
+![ios-11](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-04-23-33-54_orig.png)
 
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
@@ -11,7 +11,7 @@ iOS 10 theme for Linux desktops, for the moment only available for Unity and Cin
 
 **License :** GPL v3
 
-**More info :** http://b00merang.weebly.com/ios-10.html
+**More info :** http://b00merang.weebly.com/ios-11.html
 
 ### Manual installation ###
 
@@ -32,7 +32,7 @@ xfconf-query -c xsettings -p /Net/ThemeName -s "iOS"
 
 ### Requirements ###
 
-- GTK+ 3.6 or above
+- GTK+ 3.18 or above
 - Murrine and Pixmap theme engines
 
 ### Contribute ###
