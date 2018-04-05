@@ -2241,7 +2241,7 @@ headerbar {
 }
 
 headerbar:backdrop {
-    background-color: @theme_unfocused_bg_color;
+    background-color: transparent;
     background-image: none;
     color: @theme_unfocused_fg_color;
 }
