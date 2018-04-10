@@ -856,14 +856,14 @@ menu button {
 
 menu > arrow.top,
 .menu > arrow.top {
-    margin-top: -6px;
+    margin-top: -3px;
     border-bottom: 1px solid shade(@theme_bg_color, 0.9);
     -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
 menu > arrow.bottom,
 .menu > arrow.bottom {
-    margin-bottom: -6px;
+    margin-bottom: -3px;
     border-top: 1px solid shade(@theme_bg_color, 0.9);
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -1910,12 +1910,17 @@ placessidebar row {
     -gtk-outline-radius: 100%; }
 
 stacksidebar row {
-  padding: 10px 4px; }
-  stacksidebar row > label {
+    padding: 10px 4px;
+}
+
+stacksidebar row > label {
     padding-left: 6px;
-    padding-right: 6px; }
-  stacksidebar row.needs-attention > label {
-    background-size: 6px 6px, 0 0; }
+    padding-right: 6px;
+}
+
+stacksidebar row.needs-attention > label {
+    background-size: 6px 6px, 0 0;
+}
 
 /**************
  * spinbutton *
@@ -2532,7 +2537,7 @@ GtkViewport frame {
 /**************
  * action-bar *
  **************/
-.action-bar {
+actionbar {
     padding: 4px;
     border-width: 1px 0 0 0px;
     border-style: solid;
@@ -2542,20 +2547,20 @@ GtkViewport frame {
     color: @theme_fg_color;
 }
 
-.action-bar button.text-button {
+actionbar button.text-button {
     padding: 4px;
 }
 
-.action-bar button .image-button {
+actionbar button .image-button {
     padding: 6px;
 }
 
-.action-bar .title {
+actionbar .title {
     font-weight: bold;
     padding: 0 12px;
 }
 
-.action-bar .subtitle {
+actionbar .subtitle {
     font-size: smaller;
     padding: 0 12px;
 }
@@ -2606,6 +2611,10 @@ filechooser button image:last-child {
     color: @theme_text_color;
 }
 
+.app-notification border {
+    border: none;
+}
+
 /*******
  * osd *
  *******/
@@ -2621,10 +2630,6 @@ GtkOverlay.osd {
 .osd frame {
     background-clip: border-box;
     background-origin: border-box;
-}
-
-.app-notification border {
-    border: none;
 }
 
 /*.osd button,
