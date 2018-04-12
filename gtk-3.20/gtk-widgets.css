@@ -429,13 +429,29 @@ calendar highlight {
 .primary-toolbar combobox entry button,
 .primary-toolbar combobox entry button:hover,
 .primary-toolbar combobox entry button:active,
-.primary-toolbar combobox entry button:disabled,
- combobox button,
- combobox button:hover,
- combobox button:active,
- combobox button:disabled {
-    margin-bottom: 1px;
-    border-width: 1px 1px 1px 1px;
+combobox button,
+combobox button:hover,
+combobox button:active {
+    padding: 7px 4px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: @theme_base_color;
+}
+
+button.combo:only-child {
+    padding: 3px 8px;
+    background-color: transparent;
+}
+
+.linked button {
+    border-width: 0;
+    border-radius: 0;
+    background-color: @theme_base_color;
+}
+
+combobox button:disabled,
+.linked button:disabled {
+    background-color: shade(@theme_bg_color, 0.95);
 }
 
 /*********
@@ -1078,7 +1094,7 @@ modelbutton.flat,
 modelbutton.flat:active,
 modelbutton.flat:disabled,
 modelbutton.flat:active:disabled {
-    padding: 6px 8px;
+    padding: 3px 8px;
     background-color: transparent;
     background-image: none;
     border-color: transparent;
