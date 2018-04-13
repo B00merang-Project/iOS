@@ -1421,16 +1421,6 @@ trough row:selected:focus {
 }
 
 /* level bars as used for password quality or remaining power */
-Gtklevelbar {
-    -levelbar-min-block-width: 34;
-    -levelbar-min-block-height: 2;
-}
-
-Gtklevelbar.vertical {
-    -levelbar-min-block-width: 2;
-    -levelbar-min-block-height: 34;
-}
-
 levelbar trough {
     padding: 1px;
     border-radius: 4px;
@@ -1501,8 +1491,9 @@ levelbar block.empty {
     background-image: none;
 }
 
-/* Gtk Scale & slider */
-
+/*********
+ * Scale *
+ *********/
 scale {
     padding: 0px;
     border-width: 1px;
