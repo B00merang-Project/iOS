@@ -34,7 +34,7 @@ style "default"
 
 	GtkScrollbar::trough-border	= 0
 	GtkRange::trough-border		= 0
-	GtkRange::slider-width		= 13
+	GtkRange::slider-width		= 1
 	GtkRange::stepper-size		= 0
 	
 	GtkProgressBar::min-horizontal-bar-height = 4

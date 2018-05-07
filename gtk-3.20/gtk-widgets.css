@@ -260,9 +260,7 @@ row { padding: 4px; }
 row:selected,
 row:selected:hover,
 row:selected:focus {
-    border-width: 0px;
-    border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
+    border: none;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
@@ -1298,8 +1296,7 @@ notebook > header > tabs > arrow:disabled {
  * pane separator *
  ******************/
 paned > separator {
-    background-color: transparent;
-    background-image: none;
+    background-color: shade(@theme_bg_color, 0.95);
     color: transparent;
     border-style: none;
 }
@@ -1618,14 +1615,6 @@ scrollbar {
 scrollbar trough {
   background-color: transparent;
   border-radius: 0px; }
-  scrollbar.top {
-    border-bottom: 1px solid transparent; }
-  scrollbar.bottom {
-    border-top: 1px solid transparent; }
-  scrollbar.left {
-    border-right: 1px solid transparent; }
-  scrollbar.right {
-    border-left: 1px solid transparent; }
   scrollbar:backdrop {
       background-color: transparent;
     border-color: shade(@borders, 0.95);
