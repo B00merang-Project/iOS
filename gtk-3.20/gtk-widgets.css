@@ -1392,9 +1392,9 @@ undershoot.right {
   .overlay-bar label {
     color: @tooltip_fg_color; }
 
-/*************************
- * progressbar and scale *
- *************************/
+/***************
+ * progressbar *
+ ***************/
 progressbar {
     padding: 0px;
     border-width: 0px;
@@ -1403,14 +1403,18 @@ progressbar {
     min-height: 2px;
 }
 
-progress,
-progress row,
-progress row:hover,
-progress row:selected,
-progress row:selected:focus, 
-progress row:selected:focus {
-    min-width: 2px;
+progressbar trough,
+progressbar progress {
     min-height: 2px;
+}
+
+progressbar.vertical trough,
+progressbar.vertical progress {
+    min-width: 2px;
+    min-height: 0;
+}
+
+progressbar progress {
     border-radius: 0px;
     border-width: 0px;
     border-style: solid;
@@ -1419,18 +1423,12 @@ progress row:selected:focus {
     background-image: image(@theme_selected_bg_color);
 }
 
-trough,
-trough row,
-trough row:hover,
-trough row:selected,
-trough row:selected:focus {
-    min-width: 2px;
-    min-height: 2px;
+progressbar trough {
     border-width: 0px;
     border-style: solid;
     border-radius: 0px;
     border-color: shade(@theme_bg_color, 0.85);
-    background-color: shade(@theme_bg_color, 0.9);
+    background-color: alpha(@theme_fg_color, 0.1);
     background-image: none;
 }
 
