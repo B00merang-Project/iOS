@@ -1,11 +1,13 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=iOS
-Comment=A theme by Christian Medel (Elbullazul) simulating iOS 10
-Comment=v0.5
+Comment=A theme by Christian Medel (Elbullazul)
+Comment=1.0
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=iOS
 MetacityTheme=iOS
+IconTheme=La Capitaine
+CursorTheme=DMZ-Black
 ButtonLayout=close,minimize,maximize:
