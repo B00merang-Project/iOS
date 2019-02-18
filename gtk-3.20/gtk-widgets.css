@@ -1871,7 +1871,7 @@ toolbar {
       border-color: @theme_unfocused_selected_bg_color;
       background-color: @theme_unfocused_selected_bg_color; }
   .linked button:first-child, .linked .raised button:first-child, .inline-toolbar button:first-child, .inline-toolbar .raised button:first-child, .primary-toolbar button:first-child, .primary-toolbar .raised button:first-child {
-    border-left-width: 1px;
+    border-left-width: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px; }
   .linked button:last-child, .linked .raised button:last-child, .inline-toolbar button:last-child, .inline-toolbar .raised button:last-child, .primary-toolbar button:last-child, .primary-toolbar .raised button:last-child {
@@ -1928,7 +1928,7 @@ toolbar {
   border-radius: 4px; }
 
 .vertical.linked button {
-  border-left-width: 1px;
+  border-left-width: 0;
   border-top-width: 0;
   border-radius: 0;
   border-color: @theme_base_color;
@@ -2020,6 +2020,9 @@ toolbar {
       color: @theme_unfocused_selected_fg_color;
       background-color: @theme_unfocused_selected_bg_color; }
 
+stackswitcher button.text-button {
+  min-width: 80px; }
+
 tooltip {
   border-radius: 4px;
   box-shadow: none; }
@@ -2046,7 +2049,7 @@ treeview {
       background-image: none;
       background-color: @theme_bg_color; }
     treeview header button:hover, treeview header button:active:hover, treeview header button:hover:focus, treeview header button:active:hover:focus {
-      color: @theme_selected_fg_color;
+      color: @theme_fg_color;
       background-color: @theme_bg_color; }
   treeview header:last-child button {
     border-width: 0 0 1px 0; }
