@@ -1214,7 +1214,7 @@ scale {
     border-radius: 100%;
     box-shadow: 0 1px 2px 1px alpha(@dark_shadow, 0.09);
     color: @theme_fg_color;
-    background-color: @theme_base_color; }
+    background-color: shade(@theme_bg_color, 1.4); }
     scale slider:hover {
       color: @theme_fg_color;
       background-color: @theme_base_color; }
@@ -1222,11 +1222,11 @@ scale {
       background-color: @theme_disabled_base_color;
       -gtk-icon-shadow: none; }
       scale slider:disabled:backdrop {
-        background-color: @theme_unfocused_disabled_bg_color;
+        background-color: @theme_unfocused_disabled_base_color;
         -gtk-icon-shadow: none; }
     scale slider:backdrop {
       color: @theme_unfocused_fg_color;
-      background-color: @theme_unfocused_base_color; }
+      background-color: shade(@theme_unfocused_bg_color, 1.4); }
   scale value {
     color: alpha(currentColor, 0.55); }
   scale marks {
@@ -1246,7 +1246,7 @@ scale {
 
 scrollbar {
   border: none;
-  background-color: @theme_base_color; }
+  background-color: shade(@theme_bg_color, 1.2); }
   scrollbar trough {
     border: none;
     border-radius: 0; }
@@ -1546,7 +1546,7 @@ switch {
     border-radius: 100%;
     color: @theme_fg_color;
     box-shadow: 0 2px 2px 1px alpha(@dark_shadow, 0.09);
-    background-color: @theme_base_color; }
+    background-color: shade(@theme_bg_color, 1.4); }
   switch:disabled slider {
     background-color: @theme_disabled_base_color; }
   switch:disabled:backdrop slider {
