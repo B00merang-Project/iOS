@@ -1,6 +1,8 @@
+[![built-with-azurra-framework](https://github.com/Elbullazul/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/Elbullazul/Azurra_framework)
+
 # iOS
 
-### iOS theme for Linux desktops, based on the latest iteration from Apple's mobile OS
+iOS theme for Linux desktops, based on the latest iteration from Apple's mobile OS
 
 ![ios-11](https://github.com/B00merang-Project/gallery/raw/master/iOS%2012%20(3).png)
 
@@ -10,7 +12,7 @@
 
 **License :** GPL v3
 
-**More info :** http://b00merang.weebly.com/ios-11.html
+**More info :** http://b00merang.weebly.com/ios.html
 
 ### Manual installation
 
