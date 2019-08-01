@@ -242,11 +242,17 @@ style "entry" = "wider"
 
 style "button" = "wider"
 {
-	bg[NORMAL]        = @base_color
-	bg[PRELIGHT]      = @base_color
+	bg[NORMAL]        = @bg_color
+	bg[PRELIGHT]      = @bg_color
 	bg[ACTIVE]        = @selected_bg_color
 	bg[SELECTED]      = @selected_bg_color
-	bg[INSENSITIVE]   = shade (0.95, @bg_color)
+	bg[INSENSITIVE]   = @bg_color
+	
+	fg[NORMAL]        = @selected_bg_color
+	fg[PRELIGHT]      = @selected_bg_color
+	fg[SELECTED]      = @selected_fg_color
+	fg[ACTIVE]        = @selected_fg_color
+	fg[INSENSITIVE]   = mix (0.4, @fg_color, @bg_color)
 
 	engine "murrine"
 	{
@@ -296,7 +302,7 @@ style "menu"
 	bg[NORMAL]        = mix(0.5, @bg_color, @base_color)
 	bg[PRELIGHT]      = @selected_bg_color
 	bg[ACTIVE]        = shade (1.18, @bg_color)
-	bg[INSENSITIVE]   = shade (0.95, @bg_color)
+	bg[INSENSITIVE]   = @bg_color
 	fg[NORMAL]        = @fg_color # Color for normal text.
 	fg[PRELIGHT]      = @base_color
 	fg[SELECTED]      = @base_color
