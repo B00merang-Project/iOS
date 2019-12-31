@@ -44,68 +44,68 @@
 </frame_geometry>
 
 <draw_ops name="title-text-focused">
- <title color="#4c4c4c" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -72" y="(height - title_height) / 2 - 3"/>
+ <title color="#4c4c4c" x="2" y="(height - title_height) / 2 - 3"/>
 </draw_ops>
 
 <draw_ops name="title-text-unfocused">
-  <title color="#9f9f9f" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -72" y="(height - title_height) / 2 - 3"/>
+  <title color="#9f9f9f" x="2" y="(height - title_height) / 2 - 3"/>
 </draw_ops>
 
 <draw_ops name="blank">
 </draw_ops>
 
 <draw_ops name="title">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="title-shaded">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="title-unfocused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="title-max">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="title-max-unfocused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="frame-left-focused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="frame-left-unfocused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="frame-right-focused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="frame-right-unfocused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="frame-bottom-focused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="frame-bottom-unfocused">
-  <rectangle color="#f9f9f9" x="0" y="0" width="width" 
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" 
     height="height" filled="true"/>
 </draw_ops>
 
