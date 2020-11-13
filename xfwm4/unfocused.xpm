@@ -1,8 +1,8 @@
 /* XPM */
-static char * C:\Users\crime\Shared\ios\xfwm4\unfocused_xpm[] = {
+static char * unfocused_xpm[] = {
 "20 18 10 1",
 " 	c None",
-".	c #E4E4E4",
+".	c #F5F5F5",
 "+	c #C3C3C3",
 "@	c #BEBEBE",
 "#	c #C2C2C2",

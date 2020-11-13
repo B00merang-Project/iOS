@@ -1,8 +1,8 @@
 /* XPM */
-static char * C:\Users\crime\Shared\ios\xfwm4\top_left_inactive_xpm[] = {
+static char * top_left_inactive_xpm[] = {
 "8 29 2 1",
 " 	c None",
-".	c #E4E4E4",
+".	c #F5F5F5",
 "    ....",
 "  ......",
 " .......",
