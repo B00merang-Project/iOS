@@ -10,8 +10,9 @@ iOS theme for Linux desktops, based on the latest iteration from Apple's mobile 
 - Any GTK-based desktop
 - Cinnamon
 - Gnome
-- Xfce
 - LXDE/Openbox
+- MATE
+- Xfce
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
