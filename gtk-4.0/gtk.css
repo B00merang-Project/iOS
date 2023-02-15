@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .background {
   color: #000000;
   background-color: rgba(245, 245, 245, 0.999); }
@@ -1461,49 +1462,27 @@ scale {
       margin-right: -12px; }
 
 progressbar {
-  padding: 0;
-  border: none;
-  color: gray;
-  background-color: transparent; }
-  progressbar progress {
+  font-size: smaller;
+  color: gray; }
+  progressbar > trough {
+    border-radius: 10px;
+    background-color: #dddddd; }
+    progressbar > trough:backdrop {
+      background-color: rgba(235, 235, 235, 0.99); }
+  progressbar > trough > progress {
     border: none;
     border-radius: 10px;
     background-color: #3478F5; }
-    progressbar progress:backdrop {
+    progressbar > trough > progress:backdrop {
       background-color: #3478F5; }
-  progressbar trough {
-    border-radius: 10px;
-    background-color: #dddddd; }
-    progressbar trough:backdrop {
-      background-color: rgba(235, 235, 235, 0.99); }
-  progressbar.horizontal trough, progressbar.horizontal progress {
+  progressbar.horizontal > trough {
+    min-width: 150px; }
+  progressbar.vertical > trough {
+    min-height: 80px; }
+  progressbar.horizontal > trough, progressbar.horizontal > trough  > progress {
     min-height: 2px; }
-  progressbar.vertical trough, progressbar.vertical progress {
+  progressbar.vertical > trough, progressbar.vertical > trough > progress {
     min-width: 2px; }
-
-treeview.view.progressbar, treeview.view.progressbar:disabled {
-  color: #FFFFFF;
-  border-radius: 0;
-  background-color: #3478F5; }
-
-treeview.view.progressbar:focus, treeview.view.progressbar:selected:focus, treeview.view.progressbar:focus:selected, treeview.view.progressbar:focus:selected:focus, treeview.view.progressbar:disabled:selected {
-  border-radius: 0;
-  color: #3478F5;
-  background-color: #FFFFFF; }
-
-treeview.view.trough {
-  color: #000000;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-  border: none; }
-  treeview.view.trough:selected, treeview.view.trough:selected:focus {
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 0;
-    border: none; }
-
-infobar treeview.view trough, row:selected treeview.view trough {
-  background-color: rgba(0, 0, 0, 0.1); }
 
 levelbar trough {
   padding: 1px;
