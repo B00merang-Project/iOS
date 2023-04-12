@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .background {
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.999); }
@@ -1493,12 +1492,13 @@ progressbar {
   color: white; }
   progressbar > trough {
     border-radius: 10px;
+    border: none;
     background-color: #1a1a1a; }
     progressbar > trough:backdrop {
       background-color: rgba(10, 10, 10, 0.99); }
   progressbar > trough > progress {
-    border: none;
     border-radius: 10px;
+    border: none;
     background-color: #3478F5; }
     progressbar > trough > progress:backdrop {
       background-color: #3478F5; }
@@ -1506,10 +1506,10 @@ progressbar {
     min-width: 150px; }
   progressbar.vertical > trough {
     min-height: 80px; }
-  progressbar.horizontal > trough, progressbar.horizontal > trough  > progress {
-    min-height: 2px; }
+  progressbar.horizontal > trough, progressbar.horizontal > trough > progress {
+    min-height: 3px; }
   progressbar.vertical > trough, progressbar.vertical > trough > progress {
-    min-width: 2px; }
+    min-width: 3px; }
 
 levelbar trough {
   padding: 1px;
