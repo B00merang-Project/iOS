@@ -480,6 +480,8 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 4px 8px;
+  min-width: 14px;
+  min-height: 24px;
   border-radius: 4px;
   border: 1px solid transparent;
   color: #3478F5;
@@ -573,8 +575,6 @@ button.flat {
     background-color: #2b6ee9; }
 
 button.destructive-action {
-  padding: 4px 8px;
-  border-radius: 4px;
   border: 1px solid transparent;
   color: #CC0000;
   background-color: transparent;
@@ -594,8 +594,6 @@ button.destructive-action {
     color: rgba(204, 0, 0, 0.8); }
 
 button.suggested-action {
-  padding: 4px 8px;
-  border-radius: 4px;
   border: 1px solid transparent;
   color: #3478F5;
   background-color: transparent;
